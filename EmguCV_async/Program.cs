@@ -16,7 +16,7 @@ namespace EmguCV_async
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form6_Text_Segmentation());
+            Application.Run(new Form7_Video_Capture_from_file());
         }
     }
 }

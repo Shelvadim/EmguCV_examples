@@ -16,7 +16,7 @@ namespace EmguCV_async
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form5_Sorting_Contours());
+            Application.Run(new Form6_Text_Segmentation());
         }
     }
 }

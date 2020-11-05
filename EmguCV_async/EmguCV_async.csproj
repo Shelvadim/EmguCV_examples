@@ -109,6 +109,12 @@
     <Compile Include="Form5_Sorting_Contours.Designer.cs">
       <DependentUpon>Form5_Sorting_Contours.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form6_Text_Segmentation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form6_Text_Segmentation.Designer.cs">
+      <DependentUpon>Form6_Text_Segmentation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1_async.resx">
@@ -128,6 +134,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form5_Sorting_Contours.resx">
       <DependentUpon>Form5_Sorting_Contours.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form6_Text_Segmentation.resx">
+      <DependentUpon>Form6_Text_Segmentation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

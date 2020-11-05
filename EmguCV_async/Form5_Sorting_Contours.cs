@@ -44,7 +44,7 @@ namespace EmguCV_async
 
         private void findContoursToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            imgOutput = imgInput.Convert<Gray, byte>().ThresholdBinary(new Gray(50), new Gray(255));
+            imgOutput = imgInput.Convert<Gray, byte>().ThresholdBinary(new Gray(30), new Gray(255));
             Emgu.CV.Util.VectorOfVectorOfPoint contours = new VectorOfVectorOfPoint();
             Mat hierar = new Mat();
 
@@ -60,7 +60,7 @@ namespace EmguCV_async
                 {
                     double area = CvInvoke.ContourArea(contours[i]);
                     Rectangle rect = CvInvoke.BoundingRectangle(contours[i]);
-                    if (rect.Width > 20 && rect.Height>20 && area>4000)
+                    if (rect.Width > 10 && rect.Height>10 && area>10)
                     {
                         dict.Add(i, area);
                     }
@@ -76,14 +76,14 @@ namespace EmguCV_async
             {
                 int key = int.Parse(it.Key.ToString());
                 Rectangle rect = CvInvoke.BoundingRectangle(contours[key]);
-                //CvInvoke.DrawContours(imgInput, contours, key, new MCvScalar(255, 255, 255), 4);
-                CvInvoke.Rectangle(imgOut, rect, new MCvScalar(255, 255, 255), 3);
-                //CvInvoke.Rectangle(imgInput, rect, new MCvScalar(255, 0, 0), 3);
+                CvInvoke.DrawContours(imgInput, contours, key, new MCvScalar(255, 255, 255), 4);
+                //CvInvoke.Rectangle(imgOut, rect, new MCvScalar(255, 255, 255), 3);
+                CvInvoke.Rectangle(imgInput, rect, new MCvScalar(255, 0, 0), 3);
             }
 
             
-            //pictureBox2.Image = imgInput.ToBitmap();
-            pictureBox2.Image = imgOut.ToBitmap();
+            pictureBox2.Image = imgInput.ToBitmap();
+           // pictureBox2.Image = imgOut.ToBitmap();
         }
     }
 }

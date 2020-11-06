@@ -84,5 +84,6 @@ namespace EmguCV_async
         {
             pause = true;
         }
+
     }
 }

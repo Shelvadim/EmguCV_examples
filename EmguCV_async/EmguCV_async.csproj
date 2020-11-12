@@ -73,6 +73,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form10_Write_Video.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form10_Write_Video.Designer.cs">
+      <DependentUpon>Form10_Write_Video.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1_async.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +141,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form10_Write_Video.resx">
+      <DependentUpon>Form10_Write_Video.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1_async.resx">
       <DependentUpon>Form1_async.cs</DependentUpon>
     </EmbeddedResource>

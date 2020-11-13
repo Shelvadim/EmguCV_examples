@@ -16,7 +16,7 @@ namespace EmguCV_async
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form10_Write_Video());
+            Application.Run(new Form11_Load_Play_Video());
         }
     }
 }

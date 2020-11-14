@@ -85,6 +85,12 @@
     <Compile Include="Form11_Load_Play_Video.Designer.cs">
       <DependentUpon>Form11_Load_Play_Video.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form12_Crop_Image_Mouse_Selection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form12_Crop_Image_Mouse_Selection.Designer.cs">
+      <DependentUpon>Form12_Crop_Image_Mouse_Selection.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1_async.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,6 +158,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form11_Load_Play_Video.resx">
       <DependentUpon>Form11_Load_Play_Video.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form12_Crop_Image_Mouse_Selection.resx">
+      <DependentUpon>Form12_Crop_Image_Mouse_Selection.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1_async.resx">
       <DependentUpon>Form1_async.cs</DependentUpon>

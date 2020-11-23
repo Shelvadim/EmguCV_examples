@@ -16,7 +16,7 @@ namespace EmguCV_async
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form12_Crop_Image_Mouse_Selection());
+            Application.Run(new Form14_Image_Blending());
         }
     }
 }

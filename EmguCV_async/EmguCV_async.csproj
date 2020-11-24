@@ -103,6 +103,12 @@
     <Compile Include="Form14_Image_Blending.Designer.cs">
       <DependentUpon>Form14_Image_Blending.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form15_Face_detection_Cascade_Classifiers_Haar_LBP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form15_Face_detection_Cascade_Classifiers_Haar_LBP.Designer.cs">
+      <DependentUpon>Form15_Face_detection_Cascade_Classifiers_Haar_LBP.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1_async.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,6 +186,9 @@
     <EmbeddedResource Include="Form14_Image_Blending.resx">
       <DependentUpon>Form14_Image_Blending.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form15_Face_detection_Cascade_Classifiers_Haar_LBP.resx">
+      <DependentUpon>Form15_Face_detection_Cascade_Classifiers_Haar_LBP.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1_async.resx">
       <DependentUpon>Form1_async.cs</DependentUpon>
     </EmbeddedResource>
@@ -234,6 +243,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data\haarcascade_eye.xml" />
+    <Content Include="Data\haarcascade_frontalface_default.xml" />
+    <Content Include="Data\lbpcascade_frontalface_improved.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Emgu.CV.runtime.windows.4.4.0.4099\build\Emgu.CV.runtime.windows.targets" Condition="Exists('..\packages\Emgu.CV.runtime.windows.4.4.0.4099\build\Emgu.CV.runtime.windows.targets')" />

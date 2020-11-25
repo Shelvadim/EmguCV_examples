@@ -115,6 +115,12 @@
     <Compile Include="Form16_Shape_detection_Contours.Designer.cs">
       <DependentUpon>Form16_Shape_detection_Contours.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form17_Connected_Component_Labeling.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form17_Connected_Component_Labeling.Designer.cs">
+      <DependentUpon>Form17_Connected_Component_Labeling.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1_async.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -197,6 +203,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form16_Shape_detection_Contours.resx">
       <DependentUpon>Form16_Shape_detection_Contours.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form17_Connected_Component_Labeling.resx">
+      <DependentUpon>Form17_Connected_Component_Labeling.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1_async.resx">
       <DependentUpon>Form1_async.cs</DependentUpon>

@@ -16,7 +16,7 @@ namespace EmguCV_async
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form16_Shape_detection_Contours());
+            Application.Run(new Form17_Connected_Component_Labeling());
         }
     }
 }

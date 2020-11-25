@@ -16,7 +16,7 @@ namespace EmguCV_async
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form15_Face_detection_Cascade_Classifiers_Haar_LBP());
+            Application.Run(new Form16_Shape_detection_Contours());
         }
     }
 }

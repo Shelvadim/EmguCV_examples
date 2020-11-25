@@ -109,6 +109,12 @@
     <Compile Include="Form15_Face_detection_Cascade_Classifiers_Haar_LBP.Designer.cs">
       <DependentUpon>Form15_Face_detection_Cascade_Classifiers_Haar_LBP.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form16_Shape_detection_Contours.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form16_Shape_detection_Contours.Designer.cs">
+      <DependentUpon>Form16_Shape_detection_Contours.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1_async.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -188,6 +194,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form15_Face_detection_Cascade_Classifiers_Haar_LBP.resx">
       <DependentUpon>Form15_Face_detection_Cascade_Classifiers_Haar_LBP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form16_Shape_detection_Contours.resx">
+      <DependentUpon>Form16_Shape_detection_Contours.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1_async.resx">
       <DependentUpon>Form1_async.cs</DependentUpon>

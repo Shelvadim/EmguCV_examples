@@ -121,6 +121,18 @@
     <Compile Include="Form17_Connected_Component_Labeling.Designer.cs">
       <DependentUpon>Form17_Connected_Component_Labeling.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form18_Cropping_Objects_from_Segmented_Images.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form18_Cropping_Objects_from_Segmented_Images.Designer.cs">
+      <DependentUpon>Form18_Cropping_Objects_from_Segmented_Images.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form19_Connected_Component_Labeling_Statistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form19_Connected_Component_Labeling_Statistics.Designer.cs">
+      <DependentUpon>Form19_Connected_Component_Labeling_Statistics.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1_async.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -206,6 +218,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form17_Connected_Component_Labeling.resx">
       <DependentUpon>Form17_Connected_Component_Labeling.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form18_Cropping_Objects_from_Segmented_Images.resx">
+      <DependentUpon>Form18_Cropping_Objects_from_Segmented_Images.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form19_Connected_Component_Labeling_Statistics.resx">
+      <DependentUpon>Form19_Connected_Component_Labeling_Statistics.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1_async.resx">
       <DependentUpon>Form1_async.cs</DependentUpon>

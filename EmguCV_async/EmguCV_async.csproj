@@ -139,6 +139,12 @@
     <Compile Include="Form1_async.Designer.cs">
       <DependentUpon>Form1_async.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form20_Select_ROI_With_Mouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form20_Select_ROI_With_Mouse.Designer.cs">
+      <DependentUpon>Form20_Select_ROI_With_Mouse.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form2_Morphological_Processing.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -227,6 +233,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1_async.resx">
       <DependentUpon>Form1_async.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form20_Select_ROI_With_Mouse.resx">
+      <DependentUpon>Form20_Select_ROI_With_Mouse.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form2_Morphological_Processing.resx">
       <DependentUpon>Form2_Morphological_Processing.cs</DependentUpon>

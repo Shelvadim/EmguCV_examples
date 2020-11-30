@@ -16,7 +16,7 @@ namespace EmguCV_async
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form19_Connected_Component_Labeling_Statistics());
+            Application.Run(new Form20_Select_ROI_With_Mouse());
         }
     }
 }

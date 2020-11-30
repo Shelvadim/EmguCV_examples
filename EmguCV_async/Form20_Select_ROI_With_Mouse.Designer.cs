@@ -36,13 +36,15 @@ namespace EmguCV_async
             this.processToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rOIToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.selectROIToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.getRegionOfROIToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.getRegionOfROIToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gausianBlureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cannyEadgesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -75,14 +77,14 @@ namespace EmguCV_async
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(128, 26);
             this.openToolStripMenuItem.Text = "Open";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(128, 26);
             this.exitToolStripMenuItem.Text = "Exit";
             // 
             // processToolStripMenuItem
@@ -97,7 +99,9 @@ namespace EmguCV_async
             // 
             this.rOIToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.selectROIToolStripMenuItem,
-            this.getRegionOfROIToolStripMenuItem});
+            this.getRegionOfROIToolStripMenuItem,
+            this.gausianBlureToolStripMenuItem,
+            this.cannyEadgesToolStripMenuItem});
             this.rOIToolStripMenuItem.Name = "rOIToolStripMenuItem";
             this.rOIToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.rOIToolStripMenuItem.Text = "ROI";
@@ -108,6 +112,13 @@ namespace EmguCV_async
             this.selectROIToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.selectROIToolStripMenuItem.Text = "Select ROI";
             this.selectROIToolStripMenuItem.Click += new System.EventHandler(this.selectROIToolStripMenuItem_Click);
+            // 
+            // getRegionOfROIToolStripMenuItem
+            // 
+            this.getRegionOfROIToolStripMenuItem.Name = "getRegionOfROIToolStripMenuItem";
+            this.getRegionOfROIToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.getRegionOfROIToolStripMenuItem.Text = "Get region of ROI";
+            this.getRegionOfROIToolStripMenuItem.Click += new System.EventHandler(this.getRegionOfROIToolStripMenuItem_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -173,12 +184,19 @@ namespace EmguCV_async
             this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
             this.pictureBox1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseUp);
             // 
-            // getRegionOfROIToolStripMenuItem
+            // gausianBlureToolStripMenuItem
             // 
-            this.getRegionOfROIToolStripMenuItem.Name = "getRegionOfROIToolStripMenuItem";
-            this.getRegionOfROIToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.getRegionOfROIToolStripMenuItem.Text = "Get region of ROI";
-            this.getRegionOfROIToolStripMenuItem.Click += new System.EventHandler(this.getRegionOfROIToolStripMenuItem_Click);
+            this.gausianBlureToolStripMenuItem.Name = "gausianBlureToolStripMenuItem";
+            this.gausianBlureToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.gausianBlureToolStripMenuItem.Text = "Gaussian Blur ROI";
+            this.gausianBlureToolStripMenuItem.Click += new System.EventHandler(this.gausianBlureToolStripMenuItem_Click);
+            // 
+            // cannyEadgesToolStripMenuItem
+            // 
+            this.cannyEadgesToolStripMenuItem.Name = "cannyEadgesToolStripMenuItem";
+            this.cannyEadgesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.cannyEadgesToolStripMenuItem.Text = "Canny Edges ROI";
+            this.cannyEadgesToolStripMenuItem.Click += new System.EventHandler(this.cannyEadgesToolStripMenuItem_Click);
             // 
             // Form20_Select_ROI_With_Mouse
             // 
@@ -218,5 +236,7 @@ namespace EmguCV_async
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolStripMenuItem getRegionOfROIToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gausianBlureToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cannyEadgesToolStripMenuItem;
     }
 }

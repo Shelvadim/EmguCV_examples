@@ -130,6 +130,68 @@ namespace EmguCV_async
             selected = true;
         }
 
+        private void gausianBlureToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (pictureBox1.Image == null || rect == Rectangle.Empty)
+                {
+                    return;
+                }
+
+                var img2 = new Bitmap(pictureBox1.Image).ToImage<Bgr, byte>();
+                img2.ROI = rect;
+                var imgROI1 = img2.Copy();
+                var imgSmooth = imgROI1.SmoothGaussian(25);
+
+                img2.SetValue(new Bgr(1, 1, 1));
+                img2._Mul(imgSmooth);
+
+
+                img2.ROI = Rectangle.Empty;
+
+                pictureBox1.Image = img2.ToBitmap();
+                AddImage(img2, "GuassianBlur");
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void cannyEadgesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (pictureBox1.Image == null || rect == Rectangle.Empty)
+                {
+                    return;
+                }
+
+                var img2 = new Bitmap(pictureBox1.Image).ToImage<Bgr, byte>();
+                img2.ROI = rect;
+                var imgROI1 = img2.Copy();
+                var imgCanny = imgROI1.SmoothGaussian(5).Canny(100,50);
+                var imgBgr = imgCanny.Convert<Bgr, byte>();
+
+                img2.SetValue(new Bgr(1, 1, 1));
+
+                img2._Mul(imgBgr);
+
+
+                img2.ROI = Rectangle.Empty;
+
+                pictureBox1.Image = img2.ToBitmap();
+                AddImage(img2, "Canny");
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
         private void AddImage(Image<Bgr, byte> img,string keyName)
         {
             if (!treeView1.Nodes.ContainsKey(keyName))

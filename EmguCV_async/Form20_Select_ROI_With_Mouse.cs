@@ -192,6 +192,86 @@ namespace EmguCV_async
             }
         }
 
+        private void matchingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (pictureBox1.Image == null || rect == Rectangle.Empty)
+                {
+                    return;
+                }
+
+                var imgScene = imgList["Input"].Clone();
+                var template = new Bitmap(pictureBox1.Image).ToImage<Bgr, byte>();
+
+                Mat imgout = new Mat();
+
+                CvInvoke.MatchTemplate(imgScene, template, imgout, Emgu.CV.CvEnum.TemplateMatchingType.Sqdiff);
+
+                double minVal = 0.0;
+                double maxVal = 0.0;
+
+                Point minLoc = new Point();
+                Point maxLoc = new Point();
+                CvInvoke.MinMaxLoc(imgout, ref minVal, ref maxVal, ref minLoc, ref maxLoc);
+                Rectangle r = new Rectangle(minLoc, template.Size);
+                CvInvoke.Rectangle(imgScene, r, new MCvScalar(255, 0, 0), 3);
+                pictureBox1.Image = imgScene.AsBitmap();
+
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void resizeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!imgList.ContainsKey("ROI image"))
+                {
+                    MessageBox.Show("Select template");
+                    return;
+                }
+
+                var img = new Bitmap(pictureBox1.Image).ToImage<Bgr, byte>();
+                img = img.Resize(1.25, Emgu.CV.CvEnum.Inter.Cubic);
+                pictureBox1.Image = img.ToBitmap();
+                AddImage(img, "Template Resized");
+
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void rotationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!imgList.ContainsKey("ROI image"))
+                {
+                    MessageBox.Show("Select template");
+                    return;
+                }
+
+                var img = new Bitmap(pictureBox1.Image).ToImage<Bgr, byte>();
+                img = img.Rotate(90, new Bgr(0,0,0), false);
+                pictureBox1.Image = img.ToBitmap();
+                AddImage(img, "Template Rotated");
+
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
         private void AddImage(Image<Bgr, byte> img,string keyName)
         {
             if (!treeView1.Nodes.ContainsKey(keyName))
